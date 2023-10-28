@@ -53,7 +53,12 @@ const questions = [
     {
         type: "input",
         name: "Tests",
-        message: "Type any test instructions for the application",
+        message: "Type any test instructions for the application.",
+    }
+    {
+        type: "input",
+        name: "Questions",
+        message: "Type any questions about the project."
     }
 ];
 
