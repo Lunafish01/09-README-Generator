@@ -1,39 +1,39 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generate = require("./utils/generateMarkdown");
+
 const generateMarkdown = require("./utils/generateMarkdown");
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: "input",
         name: "title",
-        message: "type name for project.",
+        message: "Type the name of the project.",
     },
     {
         type: "input",
         name: "description",
-        message: "Tell us what your project does.",
+        message: "Type a breif description of the project.",
     },
     {
         type: "input",
-        name: "link",
-        message: "Provide a URL to your deployed application.",
+        name: "table of contents",
+        message: "Provide a table of contents for the project.",
     },
     {
         type: "input",
-        name: "screenshot",
-        message: "Provide a screenshot of your deployed application.",
+        name: "Installation",
+        message: "Type installation instructions for application.",
     },
     {
         type: "input",
-        name: "features",
-        message: "List any important and unique features of your new application.",
+        name: "Usage",
+        message: "Type the use case scenarios for this application.",
     },
     {
         type: "checkbox",
         name: "license",
-        description: "Choose a license for your project.",
+        description: "Choose a license for the project.",
         choices: [
                 "Apache License 2.0",
                 "GNU General Public License v3.0",
@@ -47,13 +47,13 @@ const questions = [
     },
     {
         type: "input",
-        name: "email",
-        message: "incluse your email address.",
+        name: "Contributors",
+        message: "Type any contributors to this project.",
     },
     {
         type: "input",
-        name: "link",
-        message: "include a link to GItHub Repository.",
+        name: "Tests",
+        message: "Type any test instructions for the application",
     }
 ];
 
