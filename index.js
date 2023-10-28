@@ -59,7 +59,7 @@ const questions = [
         type: "input",
         name: "questions",
         message: "Type any questions about the project.",
-    }
+    },
 ];
 
 // TODO: Create a function to write README file
