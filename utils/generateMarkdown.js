@@ -27,26 +27,34 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if(license !== "none") {
-    rerturn `\n- [License](#License)\n`;
-  }
-  return "";
+  if(license == "none") {
+    return ""
+  } else if(license == "Apache License 2.0") {
+    return "[Apache 2.0 link](https://opensource.org/license/apache-2-0/)"
+  } else if(license == "GNU General Public License v3.0") {
+    return "[GPL v3 link](https://opensource.org/license/gpl-3-0/)"
+  } else if(license == "MIT License") {
+    return "[MIT link](https://opensource.org/license/mit/)"
+  } else if(license == "BSD 2-Clause \"Simplified\" License") {
+    return "[BSD-2 link](https://opensource.org/license/bsd-2-clause/)"
+  } else if(license == "BSD 3-Clause \"New\" or \"Revised\" License") {
+    return "[BSD-3 link](https://opensource.org/license/bsd-3-clause/)"
+  } else if(license == "Boost Software License 1.0") {
+    return "[BSL 1.0 link](https://opensource.org/license/bsl-1-0/)"
+  } else if(license == "Creative Commons Zero v1.0 Universal") {
+    return "[CC0-1.0 link](http://creativecommons.org/publicdomain/zero/1.0/)"
+  } else if(license == "Eclipse Public License 2.0") {
+    return "[Eclipse 2.0 link](https://opensource.org/license/epl-2-0/)"
+  } 
 };
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if(license !== "none") {
-    return `## license
-    ${title} is licensed by ${license} license.`;
-  }
-  return "";
-};
+function renderLicenseSection(license) {};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-${renderLicenseBadge(data.license)}
 ## Title
 ${data.title}
 ## Description
@@ -62,6 +70,10 @@ ${data.description}
 ${data.installation}
 ## Usage
 ${data.usage}
+## License
+${renderLicenseBadge(data.license)}
+
+${renderLicenseLink(data.license)}
 ## Contributors
 ${data.contributors}
 ## Test
