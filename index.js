@@ -22,12 +22,12 @@ const questions = [
     },
     {
         type: "input",
-        name: "Installation",
+        name: "installation",
         message: "Type installation instructions for the application.",
     },
     {
         type: "input",
-        name: "Usage",
+        name: "usage",
         message: "Type any important usage for this application.",
     },
     {
@@ -47,17 +47,17 @@ const questions = [
     },
     {
         type: "input",
-        name: "Contributors",
+        name: "contributors",
         message: "Type any contributors to this project.",
     },
     {
         type: "input",
-        name: "Tests",
+        name: "test",
         message: "Type any test instructions for the application.",
     },
     {
         type: "input",
-        name: "Questions",
+        name: "questions",
         message: "Type any questions about the project.",
     }
 ];
@@ -71,7 +71,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((responses) => {
         console.log("Create a README.md File...");
-        writeToFile("./Readme/README.md", generateMarkdown({ ...reponses }));
+        writeToFile("./Readme/README.md", generateMarkdown({ ...responses }));
     });
 }
 
