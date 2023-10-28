@@ -23,12 +23,12 @@ const questions = [
     {
         type: "input",
         name: "Installation",
-        message: "Type installation instructions for application.",
+        message: "Type installation instructions for the application.",
     },
     {
         type: "input",
         name: "Usage",
-        message: "Type the use case scenarios for this application.",
+        message: "Type any important usage for this application.",
     },
     {
         type: "checkbox",
@@ -54,11 +54,11 @@ const questions = [
         type: "input",
         name: "Tests",
         message: "Type any test instructions for the application.",
-    }
+    },
     {
         type: "input",
         name: "Questions",
-        message: "Type any questions about the project."
+        message: "Type any questions about the project.",
     }
 ];
 
